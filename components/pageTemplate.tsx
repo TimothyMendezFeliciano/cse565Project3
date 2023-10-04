@@ -94,7 +94,7 @@ export default function PageTemplate({
         <>
             <Image src={imgUrl} alt={'Charizard'} className={'h-32 w-32'} height={100} width={100}/>
             <InputBox name={`${pathname.slice(1).toSentence() || 'First'} DiaryEntry`}/>
-            <div className="space-y-2 grid-cols-1 justify-between">
+            <div className="space-y-2 grid-cols-1 justify-around">
                 <>
                     <label className="flex items-center space-x-2">
                         <input type="radio" className="form-radio text-red-500" name="color" value="bg-red-500"
