@@ -109,9 +109,9 @@ export default function PageTemplate({
                     </label>
 
                     <label className="flex items-center space-x-2">
-                        <input type="radio" className="form-radio text-white" name="color" value="bg-white"
+                        <input type="radio" className="form-radio text-white" name="color" value="bg-yellow-500"
                                onClick={(e) => setSelectedColor(e.currentTarget.value)}/>
-                        <span className="text-gray-900">White</span>
+                        <span className="text-gray-900">Yellow</span>
                     </label>
 
                     <label className="flex items-center space-x-2">
