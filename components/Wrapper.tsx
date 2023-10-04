@@ -11,7 +11,7 @@ export default function Wrapper({children}: Props) {
     return (
         <div className={'flex flex-col min-h-screen'}>
             <Navbar/>
-            <main className={'flex-grow p-4 bg-gray-100 grid grid-cols-2 gap-2 place-content-center'}>
+            <main className={'flex-grow p-4 bg-gray-100 place-content-center'}>
                 {children}
             </main>
             <Footer/>
