@@ -27,27 +27,6 @@ export default function PageTemplate({
         if (pathname.includes('second')) {
             return [
                 {
-                    id: 152,
-                    name: 'Chikorita',
-                    generation: 'Gen 2',
-                    image: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/152.png'
-                },
-                {
-                    id: 155,
-                    name: 'Cyndaquil',
-                    generation: 'Gen 2',
-                    image: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/155.png'
-                },
-                {
-                    id: 158,
-                    name: 'Totodile',
-                    generation: 'Gen 2',
-                    image: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/158.png'
-                },
-            ]
-        } else if (pathname.includes('third')) {
-            return [
-                {
                     id: 252,
                     name: 'Treecko',
                     generation: 'Gen 3',
@@ -64,6 +43,27 @@ export default function PageTemplate({
                     name: 'Mudkip',
                     generation: 'Gen 3',
                     image: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/258.png'
+                },
+            ]
+        } else if (pathname.includes('third')) {
+            return [
+                {
+                    id: 152,
+                    name: 'Chikorita',
+                    generation: 'Gen 2',
+                    image: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/152.png'
+                },
+                {
+                    id: 155,
+                    name: 'Cyndaquil',
+                    generation: 'Gen 2',
+                    image: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/155.png'
+                },
+                {
+                    id: 158,
+                    name: 'Totodile',
+                    generation: 'Gen 2',
+                    image: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/158.png'
                 },
             ]
         } else {

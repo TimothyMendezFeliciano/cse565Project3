@@ -1,11 +1,15 @@
 import PageTemplate from "@/components/pageTemplate";
+import {navigation} from "@/components/navbar";
+import {useRouter} from "next/router";
 
 export default function Third() {
+
+    const {push} = useRouter()
 
     const cta = {
         title: 'Final Page',
         action: () => {
-            alert('Nothing else.')
+            push(navigation[Math.floor(Math.random() * 3)].href)
         }
     }
     return (
