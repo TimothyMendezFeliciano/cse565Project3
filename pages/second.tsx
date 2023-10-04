@@ -1,13 +1,14 @@
 import PageTemplate from "@/components/pageTemplate";
 import {useRouter} from "next/router";
+import {navigation} from "@/components/navbar";
 
 export default function Second() {
 
     const {push} = useRouter()
     const cta = {
-        title: 'Onto Third and Final',
+        title: 'Who Knows Where',
         action: () => {
-            push('/third')
+            push(navigation[Math.floor(Math.random() * 3)].href)
         }
     }
     return (

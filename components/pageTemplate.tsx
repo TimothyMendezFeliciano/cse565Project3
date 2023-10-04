@@ -92,17 +92,9 @@ export default function PageTemplate({
 
     return (
         <>
-            <Image src={imgUrl} alt={'Charizard'} className={'h-64 w-64'} height={100} width={100}/>
+            <Image src={imgUrl} alt={'Charizard'} className={'h-32 w-32'} height={100} width={100}/>
             <InputBox name={`${pathname.slice(1).toSentence() || 'First'} DiaryEntry`}/>
-            <button
-                type="button"
-                onClick={callToAction.action}
-                className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-            >
-                {callToAction.title}
-            </button>
-
-            <div className="space-y-2 grid-rows-1 justify-between">
+            <div className="space-y-2 grid-cols-1 justify-between">
                 <>
                     <label className="flex items-center space-x-2">
                         <input type="radio" className="form-radio text-red-500" name="color" value="bg-red-500"
@@ -128,10 +120,10 @@ export default function PageTemplate({
                         <span className="text-green-500">Green</span>
                     </label>
                 </>
-                <div className={`h-24 w-24 ${selectedColor || 'bg-black'}`}></div>
+                <div className={`h-12 w-12 ${selectedColor || 'bg-black'}`}></div>
             </div>
 
-            <ol className="grid grid-cols-3 gap-4 list-none">
+            <ol className="grid grid-rows-1 gap-4 list-none">
                 {starterPokemon.map((pokemon) => (
                     <li key={pokemon.id} className="bg-white p-4 rounded-lg shadow-md list-none">
                         <Image src={pokemon.image} alt={pokemon.name} className="mx-auto" height={100} width={100}/>
@@ -140,6 +132,13 @@ export default function PageTemplate({
                     </li>
                 ))}
             </ol>
+            <button
+                type="button"
+                onClick={callToAction.action}
+                className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+            >
+                {callToAction.title}
+            </button>
         </>
     )
 }
