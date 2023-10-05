@@ -1,13 +1,14 @@
 import PageTemplate from "@/components/pageTemplate";
 import {useRouter} from "next/router";
+import {navigation} from "@/components/navbar";
 
 export default function Home() {
 
     const {push} = useRouter()
     const cta = {
-        title: 'Next Page',
+        title: 'Random Page',
         action: () => {
-            push('/second')
+            push(navigation[Math.floor(Math.random() * 3)].href)
         }
     }
 
